@@ -17,15 +17,15 @@ const capitalizeWords = (str: string): string =>
  * Formats an ISO date string into a human-readable format.
  * 
  * @param isoString - The ISO date string (e.g., "2024-10-16T07:43:00.214Z").
- * @returns The formatted date string in the format "08:43 - 16/10/2024".
+ * @returns The formatted date string in the format "07:43 - 16/10/2024".
  */
 const formatDate = (isoString: string): string => {
     const date = new Date(isoString);
-    const hours = date.getHours().toString().padStart(2, '0');
-    const minutes = date.getMinutes().toString().padStart(2, '0');
-    const day = date.getDate().toString().padStart(2, '0');
-    const month = (date.getMonth() + 1).toString().padStart(2, '0');
-    const year = date.getFullYear();
+    const hours = date.getUTCHours().toString().padStart(2, '0'); 
+    const minutes = date.getUTCMinutes().toString().padStart(2, '0'); 
+    const day = date.getUTCDate().toString().padStart(2, '0'); 
+    const month = (date.getUTCMonth() + 1).toString().padStart(2, '0'); 
+    const year = date.getUTCFullYear();
 
     return `${hours}:${minutes} - ${day}/${month}/${year}`;
 };

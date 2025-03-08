@@ -1,0 +1,25 @@
+.container {
+    font-family: 'Arial', sans-serif;
+    color: black;
+    width: 80%;
+    margin: 0 auto;
+    overflow-x: auto; /* Allow horizontal scrolling */
+}
+
+.table th:first-child, 
+.table td:first-child {
+    max-width: 80px;  
+    width: 80px;       
+}
+
+.table th:nth-child(2), 
+.table td:nth-child(2) {
+    width: 30%;
+}
+
+.table th:nth-child(3), 
+.table td:nth-child(3) {
+    max-width: 120px;
+    width: 20%;
+}
+

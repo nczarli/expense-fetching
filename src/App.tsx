@@ -1,5 +1,5 @@
 import React from "react";
-import Expense from './pages/Expense';  // Import the Expense component
+import Expense from './pages/Expense';
 
 
 const App: React.FC = () => {
